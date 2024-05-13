@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.principal-container{
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    height: 100vh;
+    grid-template-areas: 
+    "nav"
+    "main"
+    "footer";
+}
+.inicio{
+    grid-area: nav;
+    background-color: #D91E1E;
+    
+    
+}
+.inicio h2{
+    text-align: center;
+    margin-top: 1rem;
+    
+    
+}
+main{
+    grid-area: main;
+    overflow-y: scroll;
+}
+footer{
+    grid-area: footer;
+    background-color: #024873;
+}
+.fotos{
+    display: grid;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+   
+}
+.fotos h4{
+    text-align: center;
+    color:#024873 ;
+}
+
+.foto{
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+}
+
+
+.fotos button {
+    display: block;
+    margin: 0 auto;
+}
+
+nav h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-bars {
+    margin-left: 10px; 
+}
+
+footer {
+    text-align: center; 
+    align-content: center;
+}
+footer strong {
+    font-weight: bold; 
+}
+
+
+
+@media screen and (max-width: 576px){
+    .principal-container{
+    grid-template-columns: 10rem 1fr;
+    grid-template-areas: 
+    "nav main"
+    "nav main"
+    "nav footer"
+    ;
+    
+}
+}
+@media screen and (max-width: 576px) {
+    .fotos {
+        grid-template-columns: 1fr;
+        flex-wrap: wrap;
+    
+}
+}
